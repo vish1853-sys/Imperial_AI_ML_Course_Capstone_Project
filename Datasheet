@@ -1,0 +1,79 @@
+Datasheet for the BBO Capstone Project Dataset
+
+1. Motivation
+
+Why was this dataset created?
+This dataset was created to document the sequence of queries and observed outputs generated during a ten-round black-box optimisation (BBO) process across eight unknown objective functions.
+What task does it support?
+It supports:
+•	Analysis of optimisation strategies under query constraints
+•	Study of exploration vs. exploitation trade-offs
+•	Reproducibility of optimisation decision-making
+•	Evaluation of convergence behaviour
+The dataset enables reflection on how strategic decisions shape optimisation performance.
+
+2. Composition
+
+What does it contain?
+The dataset contains:
+•	Ten sequential queries per function
+•	Input parameter vectors for each query
+•	Corresponding observed objective function values
+•	Metadata describing iteration number and strategy phase (exploration vs. exploitation)
+Size and format:
+•	8 functions × 10 iterations = 80 total query–response pairs
+•	Structured in tabular format (e.g., CSV or spreadsheet)
+•	Each row includes: function ID, round number, input vector, output value
+Gaps or missing elements:
+•	No ground-truth global optimum provided
+•	No gradient information
+•	No noise decomposition (uncertainty not explicitly modelled)
+•	Limited sampling of full search space
+
+3. Collection Process
+
+How were queries generated?
+Queries were generated adaptively across ten rounds using a heuristic strategy:
+•	Rounds 1–3: Broad exploration across parameter space
+•	Rounds 4–6: Pattern detection and sensitivity analysis
+•	Rounds 7–9: Targeted exploitation of promising regions
+•	Round 10: Fine-tuned local refinement with bounded exploration
+Strategy used:
+•	Manual adaptive optimisation
+•	Decreasing step size over time
+•	Prioritisation of high-performing regions
+•	Limited verification outside promising zones
+Time frame:
+The dataset was generated sequentially during the capstone project period. Each round depended on results from prior rounds, making the process path-dependent.
+
+4. Preprocessing and Uses
+
+Transformations applied:
+•	No normalization or scaling of outputs
+•	Inputs constrained to defined search bounds
+•	Iteration metadata added for interpretability
+No synthetic augmentation or imputation was applied.
+Intended uses:
+•	Study of optimisation strategies
+•	Evaluation of decision transparency
+•	Teaching exploration–exploitation trade-offs
+•	Comparative analysis of heuristic vs. algorithmic BBO approaches
+Inappropriate uses:
+•	Benchmarking against fully automated optimisation systems without accounting for query budget
+•	Generalizing results to unrelated high-dimensional optimisation problems
+•	Interpreting outputs as representing real-world systems
+
+5. Distribution and Maintenance
+
+Availability:
+The dataset is maintained within the BBO capstone project repository or course submission system.
+Terms of use:
+•	Educational and research use only
+•	Not validated for commercial optimisation deployment
+Maintenance:
+•	Maintained by the project author
+•	Static dataset (no updates planned)
+•	Corrections would require explicit version labelling (e.g., v1.0, v1.1)
+
+Transparency benefit:
+Clear documentation supports reproducibility and allows external reviewers to reconstruct optimisation logic.
