@@ -1,0 +1,110 @@
+Model Card for the BBO Optimisation Approach
+
+1. Overview
+
+Model Name: Adaptive Heuristic BBO Strategy
+Type: Sequential, query-limited black-box optimisation approach
+Version: v1.0 (Ten-round capstone implementation)
+This is not a machine learning model, but a structured optimisation decision framework applied across eight unknown functions.
+
+2. Intended Use
+
+Suitable for:
+•	Low-budget black-box optimisation problems
+•	Educational demonstrations of adaptive search
+•	Small-dimensional search spaces
+•	Scenarios where interpretability of decisions matters
+Should be avoided for:
+•	High-dimensional optimisation
+•	Noisy or adversarial objective functions
+•	Time-critical real-world deployment
+•	Guaranteed global optimisation requirements
+
+3. Details of the Strategy
+
+Phase 1: Exploration (Rounds 1–3)
+•	Sampled diverse regions
+•	Identified rough function curvature
+•	Observed sensitivity of parameters
+Phase 2: Structured Probing (Rounds 4–6)
+•	Focused on promising areas
+•	Adjusted step sizes
+•	Tested local variability
+Phase 3: Exploitation (Rounds 7–9)
+•	Narrowed search region
+•	Reduced step magnitude
+•	Prioritized incremental improvement
+Phase 4: Local Refinement (Round 10)
+•	Fine-grained adjustments
+•	Limited re-exploration to avoid premature convergence
+The approach was heuristic, adaptive, and path-dependent.
+
+4. Performance
+
+Evaluation metric:
+•	Best observed objective value per function
+•	Improvement trajectory across rounds
+•	Stability of improvements
+Summary across eight functions:
+•	Consistent improvement in early rounds
+•	Diminishing returns after round 7
+•	Likely convergence to local optima in some cases
+•	No guarantee of global optimality
+Because true optima were unknown, performance was measured relatively, not absolutely.
+
+5. Assumptions and Limitations
+
+Key Assumptions:
+1.	Local smoothness of objective functions
+2.	Informative feedback from each query
+3.	Stability of patterns across nearby points
+4.	Limited noise
+Limitations:
+•	Only ten queries per function
+•	No probabilistic uncertainty modelling
+•	No formal convergence guarantees
+•	Susceptibility to local optima
+•	Manual heuristic adjustments
+Failure Modes:
+•	Highly discontinuous functions
+•	Deceptive landscapes
+•	High-dimensional search spaces
+
+6. Ethical Considerations
+
+While this is a technical optimisation project, transparency matters for:
+•	Reproducibility
+•	Fair evaluation of performance
+•	Avoiding overstated claims
+•	Clear articulation of assumptions
+Documenting strategy phases and decision logic ensures that results are not presented as purely outcome-driven but as shaped by bounded rational decision-making.
+Transparency also supports adaptation: others can modify the strategy, critique assumptions, or test improvements.
+
+Reflection on Documentation Quality
+
+Strengths of this Model Card:
+•	Clear breakdown of phases
+•	Explicit assumptions
+•	Honest discussion of limitations
+•	Defined intended use boundaries
+Potential Improvements:
+•	Quantitative convergence graphs
+•	Comparative baseline (e.g. random search)
+•	Formal pseudocode
+•	Sensitivity analysis summary
+However, given the project scale and educational purpose, the current structure is sufficient to:
+•	Communicate decision logic
+•	Support reproducibility
+•	Make limitations explicit
+•	Avoid overclaiming generalisability
+
+Final Reflection
+
+Together, the datasheet and model card:
+•	Separate data documentation from strategy documentation
+•	Make decision processes visible
+•	Clarify assumptions and trade-offs
+•	Enhance transparency and reproducibility
+
+In optimisation as in machine learning performance numbers alone are insufficient. 
+Clear documentation of data generation, decision logic, assumptions, and constraints are essential for responsible evaluation and meaningful comparison.
