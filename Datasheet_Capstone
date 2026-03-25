@@ -1,0 +1,60 @@
+🧠 Project Overview
+This project focuses on Black-Box Optimisation (BBO), where the objective is to identify optimal input parameters for a system whose internal workings are unknown. The optimisation is performed iteratively by submitting queries and analysing the resulting outputs.
+🎯 Objective
+Maximise the output score of the black-box function
+Identify high-performing parameter configurations
+Analyse patterns in the search space to improve optimisation efficiency
+📁 Dataset Description
+Data Source
+Generated through iterative query submissions during the BBO competition
+Each data point represents one query and its resulting score
+Data Structure
+Each record contains:
+Column Name	Description
+iteration	Query number Week 1–13
+function_id	Identifier for the function (1–8)
+input_vector	List of input parameters
+score	Output value returned by the system
+strategy	Strategy used were Reinforced Learning (RL) and Gaussiona Processes (GP)
+🔢 Input Features
+Continuous numerical values in the range [0, 1]
+Dimensionality varies depending on the function:
+Function 1–2: low-dimensional
+Function 6–8: higher-dimensional
+📈 Data Generation Process
+Initial queries generated using random sampling
+Intermediate queries refined using pattern recognition and local search
+Final queries generated using:
+Directional updates (gradient-like)
+Controlled perturbations
+Exploitation of high-performing regions
+
+
+⚙️ Preprocessing & Handling
+Values clipped to valid range [0,1]
+Inputs standardised to 6 decimal places
+No missing values (fully generated dataset)
+📊 Key Observations
+Certain parameters had higher impact on performance
+Results improved with incremental adjustments
+Random exploration became less effective over time
+Strong performance was found in localised regions of the search space
+⚖️ Limitations
+Small dataset due to limited query budget
+No access to internal function behaviour
+Potential noise in output scores
+Limited ability to model full parameter interactions
+🔁 Reproducibility
+To reproduce results:
+Use the provided input vectors in each iteration
+Submit them to the BBO system
+Record outputs and compare performance trends
+🚀 Future Improvements
+Implement Bayesian optimisation
+Apply dimensionality reduction (e.g., PCA)
+Use automated logging and visualisation tools
+Explore reinforcement learning-based optimisation strategies
+👤 Author
+Name: Varun Vishwabhan
+Module: BBO Capstone Project
+Year: 2026
