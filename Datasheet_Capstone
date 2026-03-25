@@ -29,7 +29,6 @@ Directional updates (gradient-like)
 Controlled perturbations
 Exploitation of high-performing regions
 
-
 ⚙️ Preprocessing & Handling
 Values clipped to valid range [0,1]
 Inputs standardised to 6 decimal places
