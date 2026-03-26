@@ -18,7 +18,7 @@ Range: All values between 0 and 1
 Outputs: Single scalar value representing performance
 The dataset grows over time as new queries are submitted in each iteration.  All data is generated within the optimisation process without any external involvement.
 
-MODEL (See Model_card_Capstone)
+MODEL (See Model_card_Capstone) Model_Card_Capstone
 
 This project does not rely on a single predefined machine learning model. Instead, it uses an iterative, pattern-based optimisation approach.
 
@@ -50,5 +50,4 @@ Diminishing returns in later rounds for some functions
 Key findings:
 
 High-performing inputs form clusters, especially for high dimensional functions. 
-Some dimensions influence results more strongly
-Early exploration significantly impacted the final results
+Some dimensions influence results more strongly and early exploration significantly impacted the final results.
