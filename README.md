@@ -39,7 +39,7 @@ Balance between exploration and exploitation
 Selection of candidate regions for refinement
 Early rounds used larger variations (exploration), while later rounds used smaller, controlled adjustments (exploitation).
 
-Outcome
+Outcome (See Juptyer notebook BBO_capstone.jpynb)
 
 The optimisation process showed:
 
