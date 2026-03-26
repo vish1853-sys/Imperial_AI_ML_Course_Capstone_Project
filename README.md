@@ -9,7 +9,7 @@ That is Black Box Optimisation.
 We don't know the internal "recipe" or formula of the problem. Instead, we use past results to strategically guess where the next "step" should be. By balancing exploration (trying new areas) and exploitation (climbing known slopes), we find the absolute best outcome using the fewest possible attempts.
 
 
-DATA (See Datasheet_Capstone)
+DATA (See Datasheet_Capstone) Datasheet_Capstone
 
 The dataset consists of input-output pairs that is generated through iterative queries for eight unknown black-box functions.
 
